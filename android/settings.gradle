@@ -1,0 +1,40 @@
+pluginManagement {
+    def flutterSdkPath = {
+        def props = new Properties()
+        file("local.properties").withInputStream { props.load(it) }
+        def p = props.getProperty("flutter.sdk")
+        assert p != null : "flutter.sdk not set in local.properties"
+        return p
+    }()
+    includeBuild("$flutterSdkPath/packages/flutter_tools/gradle")
+
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+/* WAJIB: plugins{} harus muncul sebelum statement lain (kecuali pluginManagement/buildscript) */
+plugins {
+    id "dev.flutter.flutter-plugin-loader" version "1.0.0"
+    id "com.android.application" version "8.5.2" apply false
+    id "org.jetbrains.kotlin.android" version "1.9.24" apply false
+}
+
+/* Ini BOLEH setelah plugins{} */
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        // Repo maven khusus Flutter, WAJIB ada di sini
+        maven {
+            url "https://storage.googleapis.com/download.flutter.io"
+        }
+    }
+}
+
+
+/* Ini juga setelah plugins{} */
+include ":app"
