@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "482575881638",
+    "project_id": "doorlock-81f11",
+    "storage_bucket": "doorlock-81f11.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482575881638:android:153147dfe66928350b6b67",
+        "android_client_info": {
+          "package_name": "com.example.dorlock"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCnTE8rKB954RVLxTylsZHST9FvfuU3UY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482575881638:android:a436bcaab569d1890b6b67",
+        "android_client_info": {
+          "package_name": "com.example.notifikasi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCnTE8rKB954RVLxTylsZHST9FvfuU3UY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
